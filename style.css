@@ -1,0 +1,197 @@
+:root {
+    /* Primary */
+    --teal-500: hsl(179, 62%, 43%);
+    --green-400: hsl(71, 73%, 54%);
+    /* Neutral */
+    --teal-100: hsl(204, 43%, 93%);
+    --gray-500: hsl(218, 22%, 67%);
+
+    /* Typography */
+    /* Font */
+    --font-family: Karla;
+    --font-weight-400: 400;
+    --font-weight-700: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--teal-100);
+    font-family: var(--font-family);
+    font-size: 16px;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.grid {
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .grid {
+        padding: 20px;
+    }
+}
+
+.grid .container {
+    background-color: white;
+    width: 55%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .grid .container {
+        width: 100%;
+    }
+}
+
+.grid .container .head {
+    padding: 30px;
+}
+
+.grid .container .head h2 {
+    color: var(--teal-500);
+    margin-bottom: 15px;
+}
+
+.grid .container .head h4 {
+    color: var(--green-400);
+    font-weight: var(--font-weight-400);
+    margin-bottom: 10px;
+}
+
+.grid .container .head p {
+    color: var(--gray-500);
+    margin-bottom: 25px;
+}
+
+@media (max-width: 767px) {
+    .grid .container .head p {
+        line-height: 1.6em;
+    }
+}
+
+.grid .container .content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    background-color: var(--teal-500);
+}
+
+@media (max-width: 767px) {
+    .grid .container .content {
+        grid-template-columns: auto;
+    }
+}
+
+.grid .container .content .price {
+    padding: 30px;
+}
+
+.grid .container .content .price h5 {
+    color: white;
+    font-weight: var(--font-weight-400);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.grid .container .content .price span {
+    color: white;
+    font-size: 30px;
+    font-weight: var(--font-weight-700);
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.grid .container .content .price span span {
+    font-size: initial;
+    color: var(--teal-100);
+    font-weight: var(--font-weight-400);
+    margin-left: 10px;
+}
+
+.grid .container .content .price p {
+    color: white;
+    font-weight: var(--font-weight-400);
+    margin-bottom: 25px;
+}
+
+.grid .container .content .price button {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--green-400);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid .container .content .why-us {
+    background-color: hsl(179, 62%, 45%);
+    padding: 30px;
+}
+
+.grid .container .content .why-us h5 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.grid .container .content .why-us ul {
+    list-style-type: none;
+}
+
+.grid .container .content .why-us li {
+    color: var(--teal-100);
+    font-weight: var(--font-weight-400);
+}
+
+.grid .container .content .why-us li:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
